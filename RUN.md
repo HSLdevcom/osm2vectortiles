@@ -41,5 +41,6 @@ Add the following lines (notice the absolute paths that have to be updated):
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 AZURE_BLOB_SAS_ACCESS_KEY=<mysecrettoken>
 
-0 1 * * * cd /[path]/osm2vectortiles && ./run.sh > /dev/null 2> /[path]/run.log
+0 1 * * 1,4 cd /[path]/osm2vectortiles && ./run.sh > /dev/null 2> /[path]/run.log
 ```
+This sets the crontab to run every week on Mondays and Thursdays night at 1:00.
